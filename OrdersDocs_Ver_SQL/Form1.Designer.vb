@@ -88,11 +88,18 @@ Partial Class FormMain
         Me.lbApproving = New System.Windows.Forms.ListBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.cbMainSign = New System.Windows.Forms.CheckBox()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
+        Me.btnSelectAll = New System.Windows.Forms.Button()
+        Me.btnClear = New System.Windows.Forms.Button()
+        Me.tbCountSelectedStandards = New System.Windows.Forms.TextBox()
+        Me.Label21 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage3.SuspendLayout()
+        Me.TabPage4.SuspendLayout()
         CType(Me.nlTasksCount, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -349,6 +356,12 @@ Partial Class FormMain
         '
         'TabPage4
         '
+        Me.TabPage4.Controls.Add(Me.Label21)
+        Me.TabPage4.Controls.Add(Me.tbCountSelectedStandards)
+        Me.TabPage4.Controls.Add(Me.btnClear)
+        Me.TabPage4.Controls.Add(Me.btnSelectAll)
+        Me.TabPage4.Controls.Add(Me.CheckedListBox1)
+        Me.TabPage4.Controls.Add(Me.Label20)
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Size = New System.Drawing.Size(561, 325)
@@ -546,6 +559,7 @@ Partial Class FormMain
         Me.lbTeamMembers.FormattingEnabled = True
         Me.lbTeamMembers.Location = New System.Drawing.Point(142, 45)
         Me.lbTeamMembers.Name = "lbTeamMembers"
+        Me.lbTeamMembers.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.lbTeamMembers.Size = New System.Drawing.Size(347, 147)
         Me.lbTeamMembers.TabIndex = 2
         '
@@ -599,6 +613,7 @@ Partial Class FormMain
         Me.lbApproving.FormattingEnabled = True
         Me.lbApproving.Location = New System.Drawing.Point(142, 199)
         Me.lbApproving.Name = "lbApproving"
+        Me.lbApproving.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
         Me.lbApproving.Size = New System.Drawing.Size(347, 95)
         Me.lbApproving.TabIndex = 4
         '
@@ -621,6 +636,63 @@ Partial Class FormMain
         Me.cbMainSign.Text = "Ще се подпише от Зам.Директора на ИАМО"
         Me.cbMainSign.UseVisualStyleBackColor = True
         '
+        'Label20
+        '
+        Me.Label20.AutoSize = True
+        Me.Label20.Location = New System.Drawing.Point(10, 14)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(103, 13)
+        Me.Label20.TabIndex = 1
+        Me.Label20.Text = "Списък стандарти:"
+        '
+        'CheckedListBox1
+        '
+        Me.CheckedListBox1.FormattingEnabled = True
+        Me.CheckedListBox1.Items.AddRange(New Object() {"АКУШЕРСТВО И ГИНЕКОЛОГИЯ", "АНЕСТЕЗИЯ И ИНТЕНЗИВНО ЛЕЧЕНИЕ", "АСИСТИРАНА РЕПРОДУКЦИЯ", "ВИРУСОЛОГИЯ", "ВЪТРЕШНИ БОЛЕСТИ", "ГАСТРОЕНТЕРОЛОГИЯ", "ГРЪДНА ХИРУРГИЯ", "ДЕТСКА ДЕНТАЛНА МЕДИЦИНА", "ДИАЛИЗНО ЛЕЧЕНИЕ", "ЕНДОКРИНОЛОГИЯ И БОЛЕСТИ НА ОБМЯНАТА", "ИМУНОЛОГИЧНА ПОДГОТОВКА ПРИ ТРАНСПЛАНТАЦИЯ НА ОРГАНИ, ТЪКАНИ И КЛЕТКИ", "ИНФЕКЦИОЗНИ БОЛЕСТИ", "КАРДИОЛОГИЯ", "КАРДИОХИРУРГИЯ", "КЛИНИЧНА АЛЕРГОЛОГИЯ", "КЛИНИЧНА ИМУНОЛОГИЯ", "КЛИНИЧНА ЛАБОРАТОРИЯ", "КЛИНИЧНА ПАТОЛОГИЯ", "КЛИНИЧНА ТОКСИКОЛОГИЯ", "КЛИНИЧНА ХЕМАТОЛОГИЯ", "КОЖНИ И ВЕНЕРИЧЕСКИ БОЛЕСТИ", "ЛИЦЕВО-ЧЕЛЮСТНА ХИРУРГИЯ", "ЛЪЧЕЛЕЧЕНИЕ", "МЕДИКО-ТЕХНИЧЕСКИ СТАНДАРТ ПО ЗЪБОТЕХНИКА", "МЕДИЦИНСКА ГЕНЕТИКА", "МЕДИЦИНСКА ОНКОЛОГИЯ", "МЕДИЦИНСКА ПАРАЗИТОЛОГИЯ", "МИКРОБИОЛОГИЯ", "НЕВРОХИРУРГИЯ", "НЕОНАТОЛОГИЯ", "НЕРВНИ БОЛЕСТИ", "НЕФРОЛОГИЯ", "НУКЛЕАРНА МЕДИЦИНА", "ОБРАЗНА ДИАГНОСТИКА", "ОБЩА МЕДИЦИНСКА ПРАКТИКА", "ОБЩИ МЕДИЦИНСКИ СТАНДАРТИ ПО ХИРУРГИЯ", "ОРАЛНА ХИРУРГИЯ", "ОРТОДОНТИЯ", "ОРТОПЕДИЯ И ТРАВМАТОЛОГИЯ", "ОЧНИ БОЛЕСТИ", "ПЕДИАТРИЯ", "ПЛАСТИЧНО-ВЪЗСТАНОВИТЕЛНА И ЕСТЕТИЧНА ХИРУРГИЯ", "ПНЕВМОЛОГИЯ И ФТИЗИАТРИЯ", "ПРЕВЕНЦИЯ И КОНТРОЛ НА ВЪТРЕБОЛНИЧНИТЕ ИНФЕКЦИИ", "ПРОФЕСИОНАЛНИ БОЛЕСТИ", "ПСИХИАТРИЯ", "РЕВМАТОЛОГИЯ", "СПЕШНА МЕДИЦИНА", "ТРАНСФУЗИОННА ХЕМАТОЛОГИЯ", "УРОЛОГИЯ", "УШНО-НОСНО-ГЪРЛЕНИ БОЛЕСТИ", "ФИЗИКАЛНА И РЕХАБИЛИТАЦИОННА МЕДИЦИНА"})
+        Me.CheckedListBox1.Location = New System.Drawing.Point(113, 14)
+        Me.CheckedListBox1.Name = "CheckedListBox1"
+        Me.CheckedListBox1.Size = New System.Drawing.Size(440, 304)
+        Me.CheckedListBox1.TabIndex = 2
+        '
+        'btnSelectAll
+        '
+        Me.btnSelectAll.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnSelectAll.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnSelectAll.Location = New System.Drawing.Point(13, 56)
+        Me.btnSelectAll.Name = "btnSelectAll"
+        Me.btnSelectAll.Size = New System.Drawing.Size(75, 23)
+        Me.btnSelectAll.TabIndex = 3
+        Me.btnSelectAll.Text = "Всички"
+        Me.btnSelectAll.UseVisualStyleBackColor = False
+        '
+        'btnClear
+        '
+        Me.btnClear.BackColor = System.Drawing.Color.FromArgb(CType(CType(128, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnClear.Location = New System.Drawing.Point(13, 98)
+        Me.btnClear.Name = "btnClear"
+        Me.btnClear.Size = New System.Drawing.Size(75, 23)
+        Me.btnClear.TabIndex = 4
+        Me.btnClear.Text = "Изчистване"
+        Me.btnClear.UseVisualStyleBackColor = False
+        '
+        'tbCountSelectedStandards
+        '
+        Me.tbCountSelectedStandards.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.tbCountSelectedStandards.Location = New System.Drawing.Point(13, 297)
+        Me.tbCountSelectedStandards.Name = "tbCountSelectedStandards"
+        Me.tbCountSelectedStandards.Size = New System.Drawing.Size(79, 20)
+        Me.tbCountSelectedStandards.TabIndex = 5
+        Me.tbCountSelectedStandards.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label21
+        '
+        Me.Label21.AutoSize = True
+        Me.Label21.Location = New System.Drawing.Point(13, 278)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(79, 13)
+        Me.Label21.TabIndex = 6
+        Me.Label21.Text = "брой избрани:"
+        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -642,6 +714,8 @@ Partial Class FormMain
         Me.GroupBox1.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
+        Me.TabPage4.ResumeLayout(False)
+        Me.TabPage4.PerformLayout()
         CType(Me.nlTasksCount, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -696,4 +770,10 @@ Partial Class FormMain
     Friend WithEvents cbMainSign As CheckBox
     Friend WithEvents Label19 As Label
     Friend WithEvents lbApproving As ListBox
+    Friend WithEvents Label20 As Label
+    Friend WithEvents CheckedListBox1 As CheckedListBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents tbCountSelectedStandards As TextBox
+    Friend WithEvents btnClear As Button
+    Friend WithEvents btnSelectAll As Button
 End Class
