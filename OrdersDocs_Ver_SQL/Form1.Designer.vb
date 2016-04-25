@@ -67,7 +67,7 @@ Partial Class Form1
         Me.TabControl1.Location = New System.Drawing.Point(-2, -1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(699, 351)
+        Me.TabControl1.Size = New System.Drawing.Size(569, 351)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
@@ -83,7 +83,7 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(691, 325)
+        Me.TabPage1.Size = New System.Drawing.Size(561, 325)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Заповед"
         Me.TabPage1.UseVisualStyleBackColor = True
@@ -102,7 +102,7 @@ Partial Class Form1
         '
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(616, 356)
+        Me.btnCancel.Location = New System.Drawing.Point(492, 356)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(75, 23)
         Me.btnCancel.TabIndex = 1
@@ -184,7 +184,9 @@ Partial Class Form1
         '
         'TreeViewReasons
         '
-        Me.TreeViewReasons.Location = New System.Drawing.Point(501, 23)
+        Me.TreeViewReasons.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TreeViewReasons.CheckBoxes = True
+        Me.TreeViewReasons.Location = New System.Drawing.Point(382, 20)
         Me.TreeViewReasons.Name = "TreeViewReasons"
         TreeNode1.ForeColor = System.Drawing.Color.Red
         TreeNode1.Name = "Node3"
@@ -242,7 +244,7 @@ Partial Class Form1
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(503, 7)
+        Me.Label4.Location = New System.Drawing.Point(379, 4)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(66, 13)
         Me.Label4.TabIndex = 8
@@ -252,15 +254,15 @@ Partial Class Form1
         '
         Me.chkListBoxScope.FormattingEnabled = True
         Me.chkListBoxScope.Items.AddRange(New Object() {"на място в ЛЗ", "по документи"})
-        Me.chkListBoxScope.Location = New System.Drawing.Point(261, 114)
+        Me.chkListBoxScope.Location = New System.Drawing.Point(238, 114)
         Me.chkListBoxScope.Name = "chkListBoxScope"
-        Me.chkListBoxScope.Size = New System.Drawing.Size(228, 34)
+        Me.chkListBoxScope.Size = New System.Drawing.Size(138, 34)
         Me.chkListBoxScope.TabIndex = 9
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(261, 98)
+        Me.Label5.Location = New System.Drawing.Point(238, 98)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(46, 13)
         Me.Label5.TabIndex = 10
@@ -271,7 +273,7 @@ Partial Class Form1
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(697, 391)
+        Me.ClientSize = New System.Drawing.Size(567, 391)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.TabControl1)
