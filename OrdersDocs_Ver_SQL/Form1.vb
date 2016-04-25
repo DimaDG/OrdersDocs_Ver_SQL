@@ -6,4 +6,9 @@
     Private Sub TreeViewReasons_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeViewReasons.AfterSelect
 
     End Sub
+
+    Private Sub chkLBStandards_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chkLBStandards.SelectedIndexChanged
+        Me.tbCountSelectedStandards.Clear()
+        Me.tbCountSelectedStandards.Text = CType(chkLBStandards.CheckedItems.Count, String)
+    End Sub
 End Class
