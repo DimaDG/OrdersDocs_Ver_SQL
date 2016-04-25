@@ -1,1 +1,12 @@
 d:\dgeorgiev\documents\visual studio 2015\Projects\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.exe.config
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.exe.config
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.exe
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.pdb
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.xml
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.vbprojResolveAssemblyReference.cache
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.Form1.resources
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.Resources.resources
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.vbproj.GenerateResource.Cache
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.exe
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.xml
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.pdb
