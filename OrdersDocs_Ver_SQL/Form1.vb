@@ -26,4 +26,15 @@
     Private Sub btnClear_Click(sender As Object, e As EventArgs) Handles btnClear.Click
         lbStandards.ClearSelected()
     End Sub
+
+    Private Sub chkListBoxReason_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chkListBoxReason.SelectedIndexChanged
+        'Включва/изключва таба със стандартите
+        Debug.Print(chkListBoxReason.GetItemCheckState(3))
+        Select Case chkListBoxReason.GetItemCheckState(3)
+            Case 1
+                Me.TabControl1.TabPages.Item("TabPage4").Enabled = True
+            Case 0
+                Me.TabControl1.TabPages.Item("TabPage4").Enabled = False
+        End Select
+    End Sub
 End Class
