@@ -28,13 +28,33 @@
     End Sub
 
     Private Sub chkListBoxReason_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chkListBoxReason.SelectedIndexChanged
+        'Debug.WriteLine("------------------------------------")
+        'Debug.WriteLine(chkListBoxReason.Items(3).ToString & " -- " & CType(chkListBoxReason.GetItemChecked(3), String))
+        'Debug.WriteLine(chkListBoxReason.Items(6).ToString & " -- " & CType(chkListBoxReason.GetItemChecked(6), String))
+        'Debug.WriteLine(chkListBoxReason.Items(8).ToString & " -- " & CType(chkListBoxReason.GetItemChecked(8), String))
+        '---------------------------------------
+        '!!!За да работи правилно трябва CheckOnClick property на контролата да бъде True!!!
+        '---------------------------------------
         'Включва/изключва таба със стандартите
-        Debug.Print(chkListBoxReason.GetItemCheckState(3))
-        Select Case chkListBoxReason.GetItemCheckState(3)
-            Case 1
-                Me.TabControl1.TabPages.Item("TabPage4").Enabled = True
-            Case 0
-                Me.TabControl1.TabPages.Item("TabPage4").Enabled = False
+        Select Case chkListBoxReason.GetItemChecked(3)
+            Case True
+                Me.TabControl1.TabPages.Item(3).Enabled = True
+            Case False
+                Me.TabControl1.TabPages.Item(3).Enabled = False
+        End Select
+        'Включва/изключва контролите за избор на РЗОК
+        Select Case chkListBoxReason.GetItemChecked(6)
+            Case True
+                Me.gbRZOK.Enabled = True
+            Case False
+                Me.gbRZOK.Enabled = False
+        End Select
+        'Включва/изключва контролите за избор на ДЗОФ
+        Select Case chkListBoxReason.GetItemChecked(8)
+            Case True
+                Me.gbDZOF.Enabled = True
+            Case False
+                Me.gbDZOF.Enabled = False
         End Select
     End Sub
 End Class
