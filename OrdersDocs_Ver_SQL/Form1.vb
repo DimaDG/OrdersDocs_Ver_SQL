@@ -3,9 +3,6 @@
         Me.Close()
     End Sub
 
-    Private Sub TreeViewReasons_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeViewReasons.AfterSelect
-
-    End Sub
 
     Private Sub lbStandards_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbStandards.SelectedIndexChanged
         'Показва в кутийката броя избрани стандарти от списъка
@@ -56,5 +53,16 @@
             Case False
                 Me.gbDZOF.Enabled = False
         End Select
+    End Sub
+
+    Private Sub TreeViewReasons_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeViewReasons.AfterSelect
+
+    End Sub
+
+    Private Sub TreeViewReasons_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeViewReasons.NodeMouseClick
+        Dim n As Integer
+        For n = 0 To TreeViewReasons.Nodes.Count - 1
+            Debug.WriteLine(TreeViewReasons.Nodes(n).Name.ToString & " -- " & TreeViewReasons.Nodes(n).Checked.ToString)
+        Next
     End Sub
 End Class

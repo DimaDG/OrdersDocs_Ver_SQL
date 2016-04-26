@@ -22,23 +22,23 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode137 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
-        Dim TreeNode138 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
-        Dim TreeNode139 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Планова", New System.Windows.Forms.TreeNode() {TreeNode137, TreeNode138})
-        Dim TreeNode140 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по случай (казус)")
-        Dim TreeNode141 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
-        Dim TreeNode142 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
-        Dim TreeNode143 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("тематична", New System.Windows.Forms.TreeNode() {TreeNode141, TreeNode142})
-        Dim TreeNode144 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("самосезиране", New System.Windows.Forms.TreeNode() {TreeNode140, TreeNode143})
-        Dim TreeNode145 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по случай (казус)")
-        Dim TreeNode146 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
-        Dim TreeNode147 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
-        Dim TreeNode148 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("тематична", New System.Windows.Forms.TreeNode() {TreeNode146, TreeNode147})
-        Dim TreeNode149 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по сигнал", New System.Windows.Forms.TreeNode() {TreeNode145, TreeNode148})
-        Dim TreeNode150 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Извънредна", New System.Windows.Forms.TreeNode() {TreeNode144, TreeNode149})
-        Dim TreeNode151 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("планова")
-        Dim TreeNode152 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("извънредна")
-        Dim TreeNode153 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Повторна", New System.Windows.Forms.TreeNode() {TreeNode151, TreeNode152})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Планова", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по случай (казус)")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("тематична", New System.Windows.Forms.TreeNode() {TreeNode5, TreeNode6})
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("самосезиране", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode7})
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по случай (казус)")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
+        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("тематична", New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11})
+        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по сигнал", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode12})
+        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Извънредна", New System.Windows.Forms.TreeNode() {TreeNode8, TreeNode13})
+        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("планова")
+        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("извънредна")
+        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Повторна", New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode16})
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.btnTasksListEdit = New System.Windows.Forms.Button()
@@ -58,15 +58,17 @@ Partial Class FormMain
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.btnObjectsListEdit = New System.Windows.Forms.Button()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.tbRegRHIF_Address = New System.Windows.Forms.TextBox()
-        Me.cbRegHIF = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.tbPHIF_Address = New System.Windows.Forms.TextBox()
+        Me.gbDZOF = New System.Windows.Forms.GroupBox()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.cbPHIF = New System.Windows.Forms.ComboBox()
+        Me.tbPHIF_Address = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.gbRZOK = New System.Windows.Forms.GroupBox()
+        Me.tbRegRHIF_Address = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.cbRegHIF = New System.Windows.Forms.ComboBox()
+        Me.btnObjectsListEdit = New System.Windows.Forms.Button()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.tbObjectID = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
@@ -94,17 +96,15 @@ Partial Class FormMain
         Me.Label20 = New System.Windows.Forms.Label()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnOK = New System.Windows.Forms.Button()
-        Me.gbRZOK = New System.Windows.Forms.GroupBox()
-        Me.gbDZOF = New System.Windows.Forms.GroupBox()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         CType(Me.nlTasksCount, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.gbDZOF.SuspendLayout()
+        Me.gbRZOK.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
-        Me.gbRZOK.SuspendLayout()
-        Me.gbDZOF.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -223,55 +223,55 @@ Partial Class FormMain
         Me.TreeViewReasons.CheckBoxes = True
         Me.TreeViewReasons.Location = New System.Drawing.Point(382, 20)
         Me.TreeViewReasons.Name = "TreeViewReasons"
-        TreeNode137.ForeColor = System.Drawing.Color.Red
-        TreeNode137.Name = "Node3"
-        TreeNode137.Text = "частична"
-        TreeNode138.ForeColor = System.Drawing.Color.Red
-        TreeNode138.Name = "Node5"
-        TreeNode138.Text = "пълна"
-        TreeNode139.ForeColor = System.Drawing.Color.Blue
-        TreeNode139.Name = "Node0"
-        TreeNode139.Text = "Планова"
-        TreeNode140.ForeColor = System.Drawing.Color.Red
-        TreeNode140.Name = "Node8"
-        TreeNode140.Text = "по случай (казус)"
-        TreeNode141.ForeColor = System.Drawing.Color.Red
-        TreeNode141.Name = "Node10"
-        TreeNode141.Text = "частична"
-        TreeNode142.ForeColor = System.Drawing.Color.Red
-        TreeNode142.Name = "Node11"
-        TreeNode142.Text = "пълна"
-        TreeNode143.ForeColor = System.Drawing.Color.Black
-        TreeNode143.Name = "Node9"
-        TreeNode143.Text = "тематична"
-        TreeNode144.Name = "Node6"
-        TreeNode144.Text = "самосезиране"
-        TreeNode145.ForeColor = System.Drawing.Color.Red
-        TreeNode145.Name = "Node12"
-        TreeNode145.Text = "по случай (казус)"
-        TreeNode146.ForeColor = System.Drawing.Color.Red
-        TreeNode146.Name = "Node14"
-        TreeNode146.Text = "частична"
-        TreeNode147.ForeColor = System.Drawing.Color.Red
-        TreeNode147.Name = "Node15"
-        TreeNode147.Text = "пълна"
-        TreeNode148.Name = "Node13"
-        TreeNode148.Text = "тематична"
-        TreeNode149.Name = "Node7"
-        TreeNode149.Text = "по сигнал"
-        TreeNode150.ForeColor = System.Drawing.Color.Blue
-        TreeNode150.Name = "Node1"
-        TreeNode150.Text = "Извънредна"
-        TreeNode151.ForeColor = System.Drawing.Color.Red
-        TreeNode151.Name = "Node16"
-        TreeNode151.Text = "планова"
-        TreeNode152.ForeColor = System.Drawing.Color.Red
-        TreeNode152.Name = "Node17"
-        TreeNode152.Text = "извънредна"
-        TreeNode153.ForeColor = System.Drawing.Color.Blue
-        TreeNode153.Name = "Node2"
-        TreeNode153.Text = "Повторна"
-        Me.TreeViewReasons.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode139, TreeNode150, TreeNode153})
+        TreeNode1.ForeColor = System.Drawing.Color.Red
+        TreeNode1.Name = "Node3"
+        TreeNode1.Text = "частична"
+        TreeNode2.ForeColor = System.Drawing.Color.Red
+        TreeNode2.Name = "Node5"
+        TreeNode2.Text = "пълна"
+        TreeNode3.ForeColor = System.Drawing.Color.Blue
+        TreeNode3.Name = "Node0"
+        TreeNode3.Text = "Планова"
+        TreeNode4.ForeColor = System.Drawing.Color.Red
+        TreeNode4.Name = "Node8"
+        TreeNode4.Text = "по случай (казус)"
+        TreeNode5.ForeColor = System.Drawing.Color.Red
+        TreeNode5.Name = "Node10"
+        TreeNode5.Text = "частична"
+        TreeNode6.ForeColor = System.Drawing.Color.Red
+        TreeNode6.Name = "Node11"
+        TreeNode6.Text = "пълна"
+        TreeNode7.ForeColor = System.Drawing.Color.Black
+        TreeNode7.Name = "Node9"
+        TreeNode7.Text = "тематична"
+        TreeNode8.Name = "Node6"
+        TreeNode8.Text = "самосезиране"
+        TreeNode9.ForeColor = System.Drawing.Color.Red
+        TreeNode9.Name = "Node12"
+        TreeNode9.Text = "по случай (казус)"
+        TreeNode10.ForeColor = System.Drawing.Color.Red
+        TreeNode10.Name = "Node14"
+        TreeNode10.Text = "частична"
+        TreeNode11.ForeColor = System.Drawing.Color.Red
+        TreeNode11.Name = "Node15"
+        TreeNode11.Text = "пълна"
+        TreeNode12.Name = "Node13"
+        TreeNode12.Text = "тематична"
+        TreeNode13.Name = "Node7"
+        TreeNode13.Text = "по сигнал"
+        TreeNode14.ForeColor = System.Drawing.Color.Blue
+        TreeNode14.Name = "Node1"
+        TreeNode14.Text = "Извънредна"
+        TreeNode15.ForeColor = System.Drawing.Color.Red
+        TreeNode15.Name = "Node16"
+        TreeNode15.Text = "планова"
+        TreeNode16.ForeColor = System.Drawing.Color.Red
+        TreeNode16.Name = "Node17"
+        TreeNode16.Text = "извънредна"
+        TreeNode17.ForeColor = System.Drawing.Color.Blue
+        TreeNode17.Name = "Node2"
+        TreeNode17.Text = "Повторна"
+        Me.TreeViewReasons.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode14, TreeNode17})
         Me.TreeViewReasons.ShowNodeToolTips = True
         Me.TreeViewReasons.Size = New System.Drawing.Size(172, 280)
         Me.TreeViewReasons.TabIndex = 7
@@ -363,65 +363,19 @@ Partial Class FormMain
         Me.TabPage2.Text = "Обект"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'btnObjectsListEdit
+        'gbDZOF
         '
-        Me.btnObjectsListEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnObjectsListEdit.Location = New System.Drawing.Point(8, 69)
-        Me.btnObjectsListEdit.Name = "btnObjectsListEdit"
-        Me.btnObjectsListEdit.Size = New System.Drawing.Size(115, 38)
-        Me.btnObjectsListEdit.TabIndex = 19
-        Me.btnObjectsListEdit.Text = "Редакция на списъка"
-        Me.btnObjectsListEdit.UseVisualStyleBackColor = False
-        '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(6, 50)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(88, 13)
-        Me.Label15.TabIndex = 18
-        Me.Label15.Text = "Адрес на РЗОК:"
-        '
-        'tbRegRHIF_Address
-        '
-        Me.tbRegRHIF_Address.Location = New System.Drawing.Point(100, 46)
-        Me.tbRegRHIF_Address.Name = "tbRegRHIF_Address"
-        Me.tbRegRHIF_Address.Size = New System.Drawing.Size(423, 20)
-        Me.tbRegRHIF_Address.TabIndex = 17
-        '
-        'cbRegHIF
-        '
-        Me.cbRegHIF.FormattingEnabled = True
-        Me.cbRegHIF.Items.AddRange(New Object() {"Благоевград", "Бургас", "Варна", "Велико Търново", "Видин", "Враца", "Габрово", "Добрич", "Кърджали", "Кюстендил", "Ловеч", "Монтана", "Пазарджик", "Перник", "Плевен", "Пловдив", "Разград", "Русе", "Силистра", "Сливен", "Смолян", "София", "София (столица)", "Стара Загора", "Търговище", "Хасково", "Шумен", "Ямбол"})
-        Me.cbRegHIF.Location = New System.Drawing.Point(100, 18)
-        Me.cbRegHIF.Name = "cbRegHIF"
-        Me.cbRegHIF.Size = New System.Drawing.Size(174, 21)
-        Me.cbRegHIF.TabIndex = 11
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(55, 22)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(39, 13)
-        Me.Label12.TabIndex = 12
-        Me.Label12.Text = "РЗОК:"
-        '
-        'Label14
-        '
-        Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(23, 44)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(92, 13)
-        Me.Label14.TabIndex = 16
-        Me.Label14.Text = "Адрес на ДДЗО:"
-        '
-        'tbPHIF_Address
-        '
-        Me.tbPHIF_Address.Location = New System.Drawing.Point(121, 40)
-        Me.tbPHIF_Address.Name = "tbPHIF_Address"
-        Me.tbPHIF_Address.Size = New System.Drawing.Size(402, 20)
-        Me.tbPHIF_Address.TabIndex = 15
+        Me.gbDZOF.Controls.Add(Me.Label13)
+        Me.gbDZOF.Controls.Add(Me.cbPHIF)
+        Me.gbDZOF.Controls.Add(Me.tbPHIF_Address)
+        Me.gbDZOF.Controls.Add(Me.Label14)
+        Me.gbDZOF.Enabled = False
+        Me.gbDZOF.Location = New System.Drawing.Point(10, 260)
+        Me.gbDZOF.Name = "gbDZOF"
+        Me.gbDZOF.Size = New System.Drawing.Size(528, 64)
+        Me.gbDZOF.TabIndex = 21
+        Me.gbDZOF.TabStop = False
+        Me.gbDZOF.Text = "ДЗО"
         '
         'Label13
         '
@@ -439,6 +393,80 @@ Partial Class FormMain
         Me.cbPHIF.Name = "cbPHIF"
         Me.cbPHIF.Size = New System.Drawing.Size(402, 21)
         Me.cbPHIF.TabIndex = 13
+        '
+        'tbPHIF_Address
+        '
+        Me.tbPHIF_Address.Location = New System.Drawing.Point(121, 40)
+        Me.tbPHIF_Address.Name = "tbPHIF_Address"
+        Me.tbPHIF_Address.Size = New System.Drawing.Size(402, 20)
+        Me.tbPHIF_Address.TabIndex = 15
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(23, 44)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(92, 13)
+        Me.Label14.TabIndex = 16
+        Me.Label14.Text = "Адрес на ДДЗО:"
+        '
+        'gbRZOK
+        '
+        Me.gbRZOK.Controls.Add(Me.tbRegRHIF_Address)
+        Me.gbRZOK.Controls.Add(Me.Label12)
+        Me.gbRZOK.Controls.Add(Me.Label15)
+        Me.gbRZOK.Controls.Add(Me.cbRegHIF)
+        Me.gbRZOK.Enabled = False
+        Me.gbRZOK.Location = New System.Drawing.Point(10, 184)
+        Me.gbRZOK.Name = "gbRZOK"
+        Me.gbRZOK.Size = New System.Drawing.Size(528, 70)
+        Me.gbRZOK.TabIndex = 20
+        Me.gbRZOK.TabStop = False
+        Me.gbRZOK.Text = "РЗОК"
+        '
+        'tbRegRHIF_Address
+        '
+        Me.tbRegRHIF_Address.Location = New System.Drawing.Point(100, 46)
+        Me.tbRegRHIF_Address.Name = "tbRegRHIF_Address"
+        Me.tbRegRHIF_Address.Size = New System.Drawing.Size(423, 20)
+        Me.tbRegRHIF_Address.TabIndex = 17
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(55, 22)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(39, 13)
+        Me.Label12.TabIndex = 12
+        Me.Label12.Text = "РЗОК:"
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Location = New System.Drawing.Point(6, 50)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(88, 13)
+        Me.Label15.TabIndex = 18
+        Me.Label15.Text = "Адрес на РЗОК:"
+        '
+        'cbRegHIF
+        '
+        Me.cbRegHIF.FormattingEnabled = True
+        Me.cbRegHIF.Items.AddRange(New Object() {"Благоевград", "Бургас", "Варна", "Велико Търново", "Видин", "Враца", "Габрово", "Добрич", "Кърджали", "Кюстендил", "Ловеч", "Монтана", "Пазарджик", "Перник", "Плевен", "Пловдив", "Разград", "Русе", "Силистра", "Сливен", "Смолян", "София", "София (столица)", "Стара Загора", "Търговище", "Хасково", "Шумен", "Ямбол"})
+        Me.cbRegHIF.Location = New System.Drawing.Point(100, 18)
+        Me.cbRegHIF.Name = "cbRegHIF"
+        Me.cbRegHIF.Size = New System.Drawing.Size(174, 21)
+        Me.cbRegHIF.TabIndex = 11
+        '
+        'btnObjectsListEdit
+        '
+        Me.btnObjectsListEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnObjectsListEdit.Location = New System.Drawing.Point(8, 69)
+        Me.btnObjectsListEdit.Name = "btnObjectsListEdit"
+        Me.btnObjectsListEdit.Size = New System.Drawing.Size(115, 38)
+        Me.btnObjectsListEdit.TabIndex = 19
+        Me.btnObjectsListEdit.Text = "Редакция на списъка"
+        Me.btnObjectsListEdit.UseVisualStyleBackColor = False
         '
         'Label10
         '
@@ -700,34 +728,6 @@ Partial Class FormMain
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = False
         '
-        'gbRZOK
-        '
-        Me.gbRZOK.Controls.Add(Me.tbRegRHIF_Address)
-        Me.gbRZOK.Controls.Add(Me.Label12)
-        Me.gbRZOK.Controls.Add(Me.Label15)
-        Me.gbRZOK.Controls.Add(Me.cbRegHIF)
-        Me.gbRZOK.Enabled = False
-        Me.gbRZOK.Location = New System.Drawing.Point(10, 184)
-        Me.gbRZOK.Name = "gbRZOK"
-        Me.gbRZOK.Size = New System.Drawing.Size(528, 70)
-        Me.gbRZOK.TabIndex = 20
-        Me.gbRZOK.TabStop = False
-        Me.gbRZOK.Text = "РЗОК"
-        '
-        'gbDZOF
-        '
-        Me.gbDZOF.Controls.Add(Me.Label13)
-        Me.gbDZOF.Controls.Add(Me.cbPHIF)
-        Me.gbDZOF.Controls.Add(Me.tbPHIF_Address)
-        Me.gbDZOF.Controls.Add(Me.Label14)
-        Me.gbDZOF.Enabled = False
-        Me.gbDZOF.Location = New System.Drawing.Point(10, 260)
-        Me.gbDZOF.Name = "gbDZOF"
-        Me.gbDZOF.Size = New System.Drawing.Size(528, 64)
-        Me.gbDZOF.TabIndex = 21
-        Me.gbDZOF.TabStop = False
-        Me.gbDZOF.Text = "ДЗО"
-        '
         'FormMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -748,14 +748,14 @@ Partial Class FormMain
         Me.GroupBox1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.gbDZOF.ResumeLayout(False)
+        Me.gbDZOF.PerformLayout()
+        Me.gbRZOK.ResumeLayout(False)
+        Me.gbRZOK.PerformLayout()
         Me.TabPage3.ResumeLayout(False)
         Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
-        Me.gbRZOK.ResumeLayout(False)
-        Me.gbRZOK.PerformLayout()
-        Me.gbDZOF.ResumeLayout(False)
-        Me.gbDZOF.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
