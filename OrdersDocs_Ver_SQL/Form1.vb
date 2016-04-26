@@ -7,8 +7,9 @@
 
     End Sub
 
-    Private Sub chkLBStandards_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chkLBStandards.SelectedIndexChanged
-        Me.tbCountSelectedStandards.Clear()
-        Me.tbCountSelectedStandards.Text = CType(chkLBStandards.CheckedItems.Count, String)
+    Private Sub lbStandards_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbStandards.SelectedIndexChanged
+        tbCountSelectedStandards.Clear()
+        'Debug.Print("избрани стандарти " & lbStandards.SelectedItems.Count)
+        tbCountSelectedStandards.Text = lbStandards.SelectedItems.Count.ToString
     End Sub
 End Class
