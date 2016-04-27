@@ -1,6 +1,10 @@
 ﻿Public Class FormAuditTasksList
-    Private Sub TreeViewReasons_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeViewReasons.AfterSelect
-        TreeViewReasons.ExpandAll()
-    End Sub
+    Public Sub New()
 
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+
+    End Sub
 End Class

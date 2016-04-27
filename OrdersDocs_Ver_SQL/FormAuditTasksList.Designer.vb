@@ -39,13 +39,10 @@ Partial Class FormAuditTasksList
         Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("планова")
         Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("извънредна")
         Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Повторна", New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode16})
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Task 1")
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Task 2")
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Task 3")
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TreeViewReasons = New System.Windows.Forms.TreeView()
-        Me.lvTasksList = New System.Windows.Forms.ListView()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.tblPannel = New System.Windows.Forms.TableLayoutPanel()
         Me.SuspendLayout()
         '
         'Label4
@@ -53,13 +50,14 @@ Partial Class FormAuditTasksList
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(541, 6)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 13)
+        Me.Label4.Size = New System.Drawing.Size(193, 13)
         Me.Label4.TabIndex = 10
-        Me.Label4.Text = "Основание:"
+        Me.Label4.Text = "Основание (причина) за проверката:"
         '
         'TreeViewReasons
         '
-        Me.TreeViewReasons.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.TreeViewReasons.BackColor = System.Drawing.SystemColors.Control
+        Me.TreeViewReasons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TreeViewReasons.Location = New System.Drawing.Point(544, 26)
         Me.TreeViewReasons.Name = "TreeViewReasons"
         TreeNode1.ForeColor = System.Drawing.Color.Red
@@ -112,23 +110,8 @@ Partial Class FormAuditTasksList
         TreeNode17.Text = "Повторна"
         Me.TreeViewReasons.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode14, TreeNode17})
         Me.TreeViewReasons.ShowNodeToolTips = True
-        Me.TreeViewReasons.Size = New System.Drawing.Size(172, 280)
+        Me.TreeViewReasons.Size = New System.Drawing.Size(190, 280)
         Me.TreeViewReasons.TabIndex = 9
-        '
-        'lvTasksList
-        '
-        Me.lvTasksList.CheckBoxes = True
-        ListViewItem1.StateImageIndex = 0
-        ListViewItem2.StateImageIndex = 0
-        ListViewItem3.StateImageIndex = 0
-        Me.lvTasksList.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3})
-        Me.lvTasksList.Location = New System.Drawing.Point(12, 26)
-        Me.lvTasksList.MultiSelect = False
-        Me.lvTasksList.Name = "lvTasksList"
-        Me.lvTasksList.Size = New System.Drawing.Size(486, 65)
-        Me.lvTasksList.TabIndex = 11
-        Me.lvTasksList.UseCompatibleStateImageBehavior = False
-        Me.lvTasksList.View = System.Windows.Forms.View.List
         '
         'Label1
         '
@@ -139,13 +122,30 @@ Partial Class FormAuditTasksList
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Списък на задачите:"
         '
+        'tblPannel
+        '
+        Me.tblPannel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
+        Me.tblPannel.ColumnCount = 3
+        Me.tblPannel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tblPannel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.tblPannel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
+        Me.tblPannel.Location = New System.Drawing.Point(15, 26)
+        Me.tblPannel.Name = "tblPannel"
+        Me.tblPannel.RowCount = 4
+        Me.tblPannel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tblPannel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.tblPannel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.tblPannel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.tblPannel.Size = New System.Drawing.Size(488, 100)
+        Me.tblPannel.TabIndex = 13
+        '
         'FormAuditTasksList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(737, 316)
+        Me.ClientSize = New System.Drawing.Size(766, 393)
+        Me.Controls.Add(Me.tblPannel)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.lvTasksList)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TreeViewReasons)
         Me.Name = "FormAuditTasksList"
@@ -157,6 +157,6 @@ Partial Class FormAuditTasksList
 
     Friend WithEvents Label4 As Label
     Friend WithEvents TreeViewReasons As TreeView
-    Friend WithEvents lvTasksList As ListView
     Friend WithEvents Label1 As Label
+    Friend WithEvents tblPannel As TableLayoutPanel
 End Class

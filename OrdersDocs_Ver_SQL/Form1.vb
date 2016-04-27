@@ -72,4 +72,20 @@
     Private Sub btnTasksListEdit_Click(sender As Object, e As EventArgs) Handles btnTasksListEdit.Click
         FormAuditTasksList.Show()
     End Sub
+
+    'създаване на обект AuditTasks като ArrayList
+    Public objAuditTasks As New ArrayList
+
+    'Метод за съхраняване на №, задача(текст) и основанието за извършване от заповедта
+    Public Sub CreateNewAuditTask(number As String, text As String, reason As String)
+        'Деклариране на AuditTask обект
+        Dim objNewAuditTask As AuditTask
+        'Създаване на нова задача
+        objNewAuditTask.Number = number
+        objNewAuditTask.Text = text
+        objNewAuditTask.Reason = reason
+        'добавяне на новата задача към списъка
+        objAuditTasks.Add(objNewAuditTask)
+    End Sub
+
 End Class
