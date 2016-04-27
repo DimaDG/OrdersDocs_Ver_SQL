@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormAuditTasksList
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormAuditTasksList
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
         Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
@@ -42,7 +42,6 @@ Partial Class FormAuditTasksList
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TreeViewReasons = New System.Windows.Forms.TreeView()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.tblPannel = New System.Windows.Forms.TableLayoutPanel()
         Me.SuspendLayout()
         '
         'Label4
@@ -122,29 +121,11 @@ Partial Class FormAuditTasksList
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Списък на задачите:"
         '
-        'tblPannel
-        '
-        Me.tblPannel.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.[Single]
-        Me.tblPannel.ColumnCount = 3
-        Me.tblPannel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.tblPannel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
-        Me.tblPannel.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45.0!))
-        Me.tblPannel.Location = New System.Drawing.Point(15, 26)
-        Me.tblPannel.Name = "tblPannel"
-        Me.tblPannel.RowCount = 4
-        Me.tblPannel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.tblPannel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.tblPannel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.tblPannel.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.tblPannel.Size = New System.Drawing.Size(488, 100)
-        Me.tblPannel.TabIndex = 13
-        '
         'FormAuditTasksList
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(766, 393)
-        Me.Controls.Add(Me.tblPannel)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TreeViewReasons)
@@ -152,11 +133,11 @@ Partial Class FormAuditTasksList
         Me.Text = "FormAuditTasksList"
         Me.ResumeLayout(False)
         Me.PerformLayout()
+        Me.TreeViewReasons.ExpandAll()
 
     End Sub
 
     Friend WithEvents Label4 As Label
     Friend WithEvents TreeViewReasons As TreeView
     Friend WithEvents Label1 As Label
-    Friend WithEvents tblPannel As TableLayoutPanel
 End Class
