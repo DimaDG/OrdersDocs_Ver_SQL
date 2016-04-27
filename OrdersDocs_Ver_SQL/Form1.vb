@@ -55,14 +55,21 @@
         End Select
     End Sub
 
-    Private Sub TreeViewReasons_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles TreeViewReasons.AfterSelect
+    Private Sub TreeViewReasons_AfterSelect(sender As Object, e As TreeViewEventArgs)
+        'За да се извлече пълният текст от избраното ниво на "Основание"
+        Debug.WriteLine("--------------------------------")
+        Debug.WriteLine(FormAuditTasksList.TreeViewReasons.SelectedNode.FullPath)
+    End Sub
+
+    Private Sub TreeViewReasons_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs)
+        FormAuditTasksList.TreeViewReasons.ExpandAll()
+    End Sub
+
+    Private Sub TreeViewReasons_AfterCheck(sender As Object, e As TreeViewEventArgs)
 
     End Sub
 
-    Private Sub TreeViewReasons_NodeMouseClick(sender As Object, e As TreeNodeMouseClickEventArgs) Handles TreeViewReasons.NodeMouseClick
-        Dim n As Integer
-        For n = 0 To TreeViewReasons.Nodes.Count - 1
-            Debug.WriteLine(TreeViewReasons.Nodes(n).Name.ToString & " -- " & TreeViewReasons.Nodes(n).Checked.ToString)
-        Next
+    Private Sub btnTasksListEdit_Click(sender As Object, e As EventArgs) Handles btnTasksListEdit.Click
+        FormAuditTasksList.Show()
     End Sub
 End Class

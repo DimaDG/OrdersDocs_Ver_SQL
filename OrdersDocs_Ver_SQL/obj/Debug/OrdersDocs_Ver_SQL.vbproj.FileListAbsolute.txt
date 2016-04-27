@@ -10,3 +10,4 @@ D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.xml
 D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.pdb
 D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.FormMain.resources
 D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.vbprojResolveAssemblyReference.cache
+D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.FormAuditTasksList.resources

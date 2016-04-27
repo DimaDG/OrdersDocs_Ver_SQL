@@ -22,23 +22,6 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Планова", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2})
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по случай (казус)")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("тематична", New System.Windows.Forms.TreeNode() {TreeNode5, TreeNode6})
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("самосезиране", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode7})
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по случай (казус)")
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("тематична", New System.Windows.Forms.TreeNode() {TreeNode10, TreeNode11})
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по сигнал", New System.Windows.Forms.TreeNode() {TreeNode9, TreeNode12})
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Извънредна", New System.Windows.Forms.TreeNode() {TreeNode8, TreeNode13})
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("планова")
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("извънредна")
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Повторна", New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode16})
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.btnTasksListEdit = New System.Windows.Forms.Button()
@@ -48,8 +31,6 @@ Partial Class FormMain
         Me.cbScope = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.clbMode = New System.Windows.Forms.CheckedListBox()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TreeViewReasons = New System.Windows.Forms.TreeView()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.chkListBoxReason = New System.Windows.Forms.CheckedListBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
@@ -128,8 +109,6 @@ Partial Class FormMain
         Me.TabPage1.Controls.Add(Me.cbScope)
         Me.TabPage1.Controls.Add(Me.Label5)
         Me.TabPage1.Controls.Add(Me.clbMode)
-        Me.TabPage1.Controls.Add(Me.Label4)
-        Me.TabPage1.Controls.Add(Me.TreeViewReasons)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.chkListBoxReason)
         Me.TabPage1.Controls.Add(Me.GroupBox1)
@@ -145,7 +124,7 @@ Partial Class FormMain
         'btnTasksListEdit
         '
         Me.btnTasksListEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.btnTasksListEdit.Location = New System.Drawing.Point(238, 216)
+        Me.btnTasksListEdit.Location = New System.Drawing.Point(11, 206)
         Me.btnTasksListEdit.Name = "btnTasksListEdit"
         Me.btnTasksListEdit.Size = New System.Drawing.Size(134, 23)
         Me.btnTasksListEdit.TabIndex = 15
@@ -155,7 +134,7 @@ Partial Class FormMain
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(238, 171)
+        Me.Label18.Location = New System.Drawing.Point(11, 161)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(138, 13)
         Me.Label18.TabIndex = 14
@@ -164,7 +143,7 @@ Partial Class FormMain
         'nlTasksCount
         '
         Me.nlTasksCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
-        Me.nlTasksCount.Location = New System.Drawing.Point(238, 190)
+        Me.nlTasksCount.Location = New System.Drawing.Point(11, 180)
         Me.nlTasksCount.Name = "nlTasksCount"
         Me.nlTasksCount.Size = New System.Drawing.Size(134, 20)
         Me.nlTasksCount.TabIndex = 13
@@ -174,7 +153,7 @@ Partial Class FormMain
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(8, 260)
+        Me.Label11.Location = New System.Drawing.Point(284, 174)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(46, 13)
         Me.Label11.TabIndex = 12
@@ -184,7 +163,7 @@ Partial Class FormMain
         '
         Me.cbScope.FormattingEnabled = True
         Me.cbScope.Items.AddRange(New Object() {"само едно ЛЗ", "няколко ЛЗ (проследяване на случай)"})
-        Me.cbScope.Location = New System.Drawing.Point(8, 279)
+        Me.cbScope.Location = New System.Drawing.Point(284, 193)
         Me.cbScope.Name = "cbScope"
         Me.cbScope.Size = New System.Drawing.Size(224, 21)
         Me.cbScope.TabIndex = 11
@@ -192,7 +171,7 @@ Partial Class FormMain
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(238, 99)
+        Me.Label5.Location = New System.Drawing.Point(11, 102)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(118, 13)
         Me.Label5.TabIndex = 10
@@ -203,83 +182,15 @@ Partial Class FormMain
         Me.clbMode.CheckOnClick = True
         Me.clbMode.FormattingEnabled = True
         Me.clbMode.Items.AddRange(New Object() {"на място в ЛЗ", "по документи"})
-        Me.clbMode.Location = New System.Drawing.Point(238, 114)
+        Me.clbMode.Location = New System.Drawing.Point(11, 117)
         Me.clbMode.Name = "clbMode"
         Me.clbMode.Size = New System.Drawing.Size(138, 34)
         Me.clbMode.TabIndex = 9
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(379, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(66, 13)
-        Me.Label4.TabIndex = 8
-        Me.Label4.Text = "Основание:"
-        '
-        'TreeViewReasons
-        '
-        Me.TreeViewReasons.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.TreeViewReasons.CheckBoxes = True
-        Me.TreeViewReasons.Location = New System.Drawing.Point(382, 20)
-        Me.TreeViewReasons.Name = "TreeViewReasons"
-        TreeNode1.ForeColor = System.Drawing.Color.Red
-        TreeNode1.Name = "Node3"
-        TreeNode1.Text = "частична"
-        TreeNode2.ForeColor = System.Drawing.Color.Red
-        TreeNode2.Name = "Node5"
-        TreeNode2.Text = "пълна"
-        TreeNode3.ForeColor = System.Drawing.Color.Blue
-        TreeNode3.Name = "Node0"
-        TreeNode3.Text = "Планова"
-        TreeNode4.ForeColor = System.Drawing.Color.Red
-        TreeNode4.Name = "Node8"
-        TreeNode4.Text = "по случай (казус)"
-        TreeNode5.ForeColor = System.Drawing.Color.Red
-        TreeNode5.Name = "Node10"
-        TreeNode5.Text = "частична"
-        TreeNode6.ForeColor = System.Drawing.Color.Red
-        TreeNode6.Name = "Node11"
-        TreeNode6.Text = "пълна"
-        TreeNode7.ForeColor = System.Drawing.Color.Black
-        TreeNode7.Name = "Node9"
-        TreeNode7.Text = "тематична"
-        TreeNode8.Name = "Node6"
-        TreeNode8.Text = "самосезиране"
-        TreeNode9.ForeColor = System.Drawing.Color.Red
-        TreeNode9.Name = "Node12"
-        TreeNode9.Text = "по случай (казус)"
-        TreeNode10.ForeColor = System.Drawing.Color.Red
-        TreeNode10.Name = "Node14"
-        TreeNode10.Text = "частична"
-        TreeNode11.ForeColor = System.Drawing.Color.Red
-        TreeNode11.Name = "Node15"
-        TreeNode11.Text = "пълна"
-        TreeNode12.Name = "Node13"
-        TreeNode12.Text = "тематична"
-        TreeNode13.Name = "Node7"
-        TreeNode13.Text = "по сигнал"
-        TreeNode14.ForeColor = System.Drawing.Color.Blue
-        TreeNode14.Name = "Node1"
-        TreeNode14.Text = "Извънредна"
-        TreeNode15.ForeColor = System.Drawing.Color.Red
-        TreeNode15.Name = "Node16"
-        TreeNode15.Text = "планова"
-        TreeNode16.ForeColor = System.Drawing.Color.Red
-        TreeNode16.Name = "Node17"
-        TreeNode16.Text = "извънредна"
-        TreeNode17.ForeColor = System.Drawing.Color.Blue
-        TreeNode17.Name = "Node2"
-        TreeNode17.Text = "Повторна"
-        Me.TreeViewReasons.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode14, TreeNode17})
-        Me.TreeViewReasons.ShowNodeToolTips = True
-        Me.TreeViewReasons.Size = New System.Drawing.Size(172, 280)
-        Me.TreeViewReasons.TabIndex = 7
-        '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(8, 99)
+        Me.Label3.Location = New System.Drawing.Point(284, 14)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(29, 13)
         Me.Label3.TabIndex = 6
@@ -290,7 +201,7 @@ Partial Class FormMain
         Me.chkListBoxReason.CheckOnClick = True
         Me.chkListBoxReason.FormattingEnabled = True
         Me.chkListBoxReason.Items.AddRange(New Object() {"Проверка по жалба(и)", "Проверка по писмо(а)", "Структура, организация и дейност", "Проверка по медицински стандарти", "По Наредба за достъп /НОПДМП/", "По Наредба №34", "Проверка на РЗОК", "Проверка на НЗОК(цу)", "ДДЗО"})
-        Me.chkListBoxReason.Location = New System.Drawing.Point(8, 114)
+        Me.chkListBoxReason.Location = New System.Drawing.Point(284, 29)
         Me.chkListBoxReason.Name = "chkListBoxReason"
         Me.chkListBoxReason.Size = New System.Drawing.Size(224, 139)
         Me.chkListBoxReason.TabIndex = 5
@@ -770,8 +681,6 @@ Partial Class FormMain
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents DateTimePicker2 As DateTimePicker
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents TreeViewReasons As TreeView
     Friend WithEvents Label3 As Label
     Friend WithEvents chkListBoxReason As CheckedListBox
     Friend WithEvents Label5 As Label
