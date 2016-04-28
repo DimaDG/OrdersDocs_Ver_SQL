@@ -11,3 +11,15 @@ D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.pdb
 D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.FormMain.resources
 D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.vbprojResolveAssemblyReference.cache
 D:\GitHub\OrdersDocs_Ver_SQL\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.FormAuditTasksList.resources
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.exe.config
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.exe
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.xml
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.pdb
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.exe
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.pdb
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\bin\Debug\OrdersDocs_Ver_SQL.xml
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.vbprojResolveAssemblyReference.cache
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.FormMain.resources
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.FormAuditTasksList.resources
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.Resources.resources
+D:\Documents\GitHub\OrdersDocs_Ver_SQL_HomeWork\OrdersDocs_Ver_SQL\obj\Debug\OrdersDocs_Ver_SQL.vbproj.GenerateResource.Cache

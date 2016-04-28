@@ -31,9 +31,11 @@
             Case True
                 'Me.TabControl1.TabPages.Item(4).Enabled = True
                 Me.tbComplaintsList.Enabled = True
+                Me.Label4.Enabled = True
             Case False
                 'Me.TabControl1.TabPages.Item(4).Enabled = False
                 Me.tbComplaintsList.Enabled = False
+                Me.Label4.Enabled = False
         End Select
         Select Case chkListBoxReason.GetItemChecked(1)
             Case True
@@ -48,6 +50,7 @@
 
         '---------------------------------------
         '!!!За да работи правилно трябва CheckOnClick property на контролата да бъде True!!!
+        'по подразбиране е първо прави селект и про второ кликване - чек
         '---------------------------------------
         'Включва/изключва таба със стандартите
         Select Case chkListBoxReason.GetItemChecked(3)
