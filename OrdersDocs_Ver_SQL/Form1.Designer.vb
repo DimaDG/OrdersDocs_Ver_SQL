@@ -75,6 +75,22 @@ Partial Class FormMain
         Me.tbCountSelectedStandards = New System.Windows.Forms.TextBox()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.Label20 = New System.Windows.Forms.Label()
+        Me.TabPage5 = New System.Windows.Forms.TabPage()
+        Me.grbLetters = New System.Windows.Forms.GroupBox()
+        Me.cbDomainSource4 = New System.Windows.Forms.ComboBox()
+        Me.cbDomainSource3 = New System.Windows.Forms.ComboBox()
+        Me.cbDomainSource2 = New System.Windows.Forms.ComboBox()
+        Me.cbDomainSource1 = New System.Windows.Forms.ComboBox()
+        Me.cbAuthority4 = New System.Windows.Forms.ComboBox()
+        Me.tbLetter4 = New System.Windows.Forms.TextBox()
+        Me.cbAuthority3 = New System.Windows.Forms.ComboBox()
+        Me.tbLetter3 = New System.Windows.Forms.TextBox()
+        Me.cbAuthority2 = New System.Windows.Forms.ComboBox()
+        Me.tbLetter2 = New System.Windows.Forms.TextBox()
+        Me.cbAuthority1 = New System.Windows.Forms.ComboBox()
+        Me.tbLetter1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.tbComplaintsList = New System.Windows.Forms.TextBox()
         Me.btnCancel = New System.Windows.Forms.Button()
         Me.btnOK = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
@@ -86,6 +102,8 @@ Partial Class FormMain
         Me.gbRZOK.SuspendLayout()
         Me.TabPage3.SuspendLayout()
         Me.TabPage4.SuspendLayout()
+        Me.TabPage5.SuspendLayout()
+        Me.grbLetters.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -94,6 +112,7 @@ Partial Class FormMain
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.Controls.Add(Me.TabPage4)
+        Me.TabControl1.Controls.Add(Me.TabPage5)
         Me.TabControl1.Location = New System.Drawing.Point(-2, -1)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -162,10 +181,10 @@ Partial Class FormMain
         'cbScope
         '
         Me.cbScope.FormattingEnabled = True
-        Me.cbScope.Items.AddRange(New Object() {"само едно ЛЗ", "няколко ЛЗ (проследяване на случай)"})
+        Me.cbScope.Items.AddRange(New Object() {"само в един обект", "в няколко обекта (проследяване на случай)"})
         Me.cbScope.Location = New System.Drawing.Point(284, 193)
         Me.cbScope.Name = "cbScope"
-        Me.cbScope.Size = New System.Drawing.Size(224, 21)
+        Me.cbScope.Size = New System.Drawing.Size(247, 21)
         Me.cbScope.TabIndex = 11
         '
         'Label5
@@ -181,10 +200,10 @@ Partial Class FormMain
         '
         Me.clbMode.CheckOnClick = True
         Me.clbMode.FormattingEnabled = True
-        Me.clbMode.Items.AddRange(New Object() {"на място в ЛЗ", "по документи"})
+        Me.clbMode.Items.AddRange(New Object() {"на място", "по документи"})
         Me.clbMode.Location = New System.Drawing.Point(11, 117)
         Me.clbMode.Name = "clbMode"
-        Me.clbMode.Size = New System.Drawing.Size(138, 34)
+        Me.clbMode.Size = New System.Drawing.Size(134, 34)
         Me.clbMode.TabIndex = 9
         '
         'Label3
@@ -192,9 +211,9 @@ Partial Class FormMain
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(284, 14)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(29, 13)
+        Me.Label3.Size = New System.Drawing.Size(93, 13)
         Me.Label3.TabIndex = 6
-        Me.Label3.Text = "Вид:"
+        Me.Label3.Text = "Вид на задачите:"
         '
         'chkListBoxReason
         '
@@ -203,7 +222,7 @@ Partial Class FormMain
         Me.chkListBoxReason.Items.AddRange(New Object() {"Проверка по жалба(и)", "Проверка по писмо(а)", "Структура, организация и дейност", "Проверка по медицински стандарти", "По Наредба за достъп /НОПДМП/", "По Наредба №34", "Проверка на РЗОК", "Проверка на НЗОК(цу)", "ДДЗО"})
         Me.chkListBoxReason.Location = New System.Drawing.Point(284, 29)
         Me.chkListBoxReason.Name = "chkListBoxReason"
-        Me.chkListBoxReason.Size = New System.Drawing.Size(224, 139)
+        Me.chkListBoxReason.Size = New System.Drawing.Size(247, 139)
         Me.chkListBoxReason.TabIndex = 5
         '
         'GroupBox1
@@ -283,7 +302,7 @@ Partial Class FormMain
         Me.gbDZOF.Enabled = False
         Me.gbDZOF.Location = New System.Drawing.Point(10, 260)
         Me.gbDZOF.Name = "gbDZOF"
-        Me.gbDZOF.Size = New System.Drawing.Size(528, 64)
+        Me.gbDZOF.Size = New System.Drawing.Size(542, 64)
         Me.gbDZOF.TabIndex = 21
         Me.gbDZOF.TabStop = False
         Me.gbDZOF.Text = "ДЗО"
@@ -330,7 +349,7 @@ Partial Class FormMain
         Me.gbRZOK.Enabled = False
         Me.gbRZOK.Location = New System.Drawing.Point(10, 184)
         Me.gbRZOK.Name = "gbRZOK"
-        Me.gbRZOK.Size = New System.Drawing.Size(528, 70)
+        Me.gbRZOK.Size = New System.Drawing.Size(542, 70)
         Me.gbRZOK.TabIndex = 20
         Me.gbRZOK.TabStop = False
         Me.gbRZOK.Text = "РЗОК"
@@ -503,7 +522,7 @@ Partial Class FormMain
         Me.lbApproving.Location = New System.Drawing.Point(142, 199)
         Me.lbApproving.Name = "lbApproving"
         Me.lbApproving.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.lbApproving.Size = New System.Drawing.Size(347, 95)
+        Me.lbApproving.Size = New System.Drawing.Size(398, 95)
         Me.lbApproving.TabIndex = 4
         '
         'Label17
@@ -521,7 +540,7 @@ Partial Class FormMain
         Me.lbTeamMembers.Location = New System.Drawing.Point(142, 45)
         Me.lbTeamMembers.Name = "lbTeamMembers"
         Me.lbTeamMembers.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple
-        Me.lbTeamMembers.Size = New System.Drawing.Size(347, 147)
+        Me.lbTeamMembers.Size = New System.Drawing.Size(398, 147)
         Me.lbTeamMembers.TabIndex = 2
         '
         'Label16
@@ -538,7 +557,7 @@ Partial Class FormMain
         Me.cbHeadName.FormattingEnabled = True
         Me.cbHeadName.Location = New System.Drawing.Point(142, 6)
         Me.cbHeadName.Name = "cbHeadName"
-        Me.cbHeadName.Size = New System.Drawing.Size(347, 21)
+        Me.cbHeadName.Size = New System.Drawing.Size(398, 21)
         Me.cbHeadName.TabIndex = 0
         '
         'TabPage4
@@ -618,6 +637,150 @@ Partial Class FormMain
         Me.Label20.TabIndex = 1
         Me.Label20.Text = "Списък стандарти:"
         '
+        'TabPage5
+        '
+        Me.TabPage5.Controls.Add(Me.grbLetters)
+        Me.TabPage5.Controls.Add(Me.Label4)
+        Me.TabPage5.Controls.Add(Me.tbComplaintsList)
+        Me.TabPage5.Enabled = False
+        Me.TabPage5.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage5.Name = "TabPage5"
+        Me.TabPage5.Size = New System.Drawing.Size(561, 333)
+        Me.TabPage5.TabIndex = 4
+        Me.TabPage5.Text = "Жалби и писма"
+        Me.TabPage5.UseVisualStyleBackColor = True
+        Me.TabPage5.Enabled = True
+        '
+        'grbLetters
+        '
+        Me.grbLetters.Controls.Add(Me.cbDomainSource4)
+        Me.grbLetters.Controls.Add(Me.cbDomainSource3)
+        Me.grbLetters.Controls.Add(Me.cbDomainSource2)
+        Me.grbLetters.Controls.Add(Me.cbDomainSource1)
+        Me.grbLetters.Controls.Add(Me.cbAuthority4)
+        Me.grbLetters.Controls.Add(Me.tbLetter4)
+        Me.grbLetters.Controls.Add(Me.cbAuthority3)
+        Me.grbLetters.Controls.Add(Me.tbLetter3)
+        Me.grbLetters.Controls.Add(Me.cbAuthority2)
+        Me.grbLetters.Controls.Add(Me.tbLetter2)
+        Me.grbLetters.Controls.Add(Me.cbAuthority1)
+        Me.grbLetters.Controls.Add(Me.tbLetter1)
+        Me.grbLetters.Location = New System.Drawing.Point(11, 53)
+        Me.grbLetters.Name = "grbLetters"
+        Me.grbLetters.Size = New System.Drawing.Size(542, 246)
+        Me.grbLetters.TabIndex = 2
+        Me.grbLetters.TabStop = False
+        Me.grbLetters.Text = "Списък на свързани със случая писма от институции:"
+        '
+        'cbDomainSource4
+        '
+        Me.cbDomainSource4.FormattingEnabled = True
+        Me.cbDomainSource4.Location = New System.Drawing.Point(365, 213)
+        Me.cbDomainSource4.Name = "cbDomainSource4"
+        Me.cbDomainSource4.Size = New System.Drawing.Size(158, 21)
+        Me.cbDomainSource4.TabIndex = 11
+        '
+        'cbDomainSource3
+        '
+        Me.cbDomainSource3.FormattingEnabled = True
+        Me.cbDomainSource3.Location = New System.Drawing.Point(365, 160)
+        Me.cbDomainSource3.Name = "cbDomainSource3"
+        Me.cbDomainSource3.Size = New System.Drawing.Size(158, 21)
+        Me.cbDomainSource3.TabIndex = 10
+        '
+        'cbDomainSource2
+        '
+        Me.cbDomainSource2.FormattingEnabled = True
+        Me.cbDomainSource2.Location = New System.Drawing.Point(365, 107)
+        Me.cbDomainSource2.Name = "cbDomainSource2"
+        Me.cbDomainSource2.Size = New System.Drawing.Size(158, 21)
+        Me.cbDomainSource2.TabIndex = 9
+        '
+        'cbDomainSource1
+        '
+        Me.cbDomainSource1.FormattingEnabled = True
+        Me.cbDomainSource1.Location = New System.Drawing.Point(365, 54)
+        Me.cbDomainSource1.Name = "cbDomainSource1"
+        Me.cbDomainSource1.Size = New System.Drawing.Size(158, 21)
+        Me.cbDomainSource1.TabIndex = 8
+        '
+        'cbAuthority4
+        '
+        Me.cbAuthority4.FormattingEnabled = True
+        Me.cbAuthority4.Location = New System.Drawing.Point(6, 213)
+        Me.cbAuthority4.Name = "cbAuthority4"
+        Me.cbAuthority4.Size = New System.Drawing.Size(338, 21)
+        Me.cbAuthority4.TabIndex = 7
+        '
+        'tbLetter4
+        '
+        Me.tbLetter4.Location = New System.Drawing.Point(6, 187)
+        Me.tbLetter4.Name = "tbLetter4"
+        Me.tbLetter4.Size = New System.Drawing.Size(202, 20)
+        Me.tbLetter4.TabIndex = 6
+        '
+        'cbAuthority3
+        '
+        Me.cbAuthority3.FormattingEnabled = True
+        Me.cbAuthority3.Location = New System.Drawing.Point(6, 160)
+        Me.cbAuthority3.Name = "cbAuthority3"
+        Me.cbAuthority3.Size = New System.Drawing.Size(338, 21)
+        Me.cbAuthority3.TabIndex = 5
+        '
+        'tbLetter3
+        '
+        Me.tbLetter3.Location = New System.Drawing.Point(6, 134)
+        Me.tbLetter3.Name = "tbLetter3"
+        Me.tbLetter3.Size = New System.Drawing.Size(202, 20)
+        Me.tbLetter3.TabIndex = 4
+        '
+        'cbAuthority2
+        '
+        Me.cbAuthority2.FormattingEnabled = True
+        Me.cbAuthority2.Location = New System.Drawing.Point(6, 107)
+        Me.cbAuthority2.Name = "cbAuthority2"
+        Me.cbAuthority2.Size = New System.Drawing.Size(338, 21)
+        Me.cbAuthority2.TabIndex = 3
+        '
+        'tbLetter2
+        '
+        Me.tbLetter2.Location = New System.Drawing.Point(6, 81)
+        Me.tbLetter2.Name = "tbLetter2"
+        Me.tbLetter2.Size = New System.Drawing.Size(202, 20)
+        Me.tbLetter2.TabIndex = 2
+        '
+        'cbAuthority1
+        '
+        Me.cbAuthority1.FormattingEnabled = True
+        Me.cbAuthority1.Location = New System.Drawing.Point(6, 54)
+        Me.cbAuthority1.Name = "cbAuthority1"
+        Me.cbAuthority1.Size = New System.Drawing.Size(338, 21)
+        Me.cbAuthority1.TabIndex = 1
+        '
+        'tbLetter1
+        '
+        Me.tbLetter1.Location = New System.Drawing.Point(6, 28)
+        Me.tbLetter1.Name = "tbLetter1"
+        Me.tbLetter1.Size = New System.Drawing.Size(202, 20)
+        Me.tbLetter1.TabIndex = 0
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(11, 8)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(220, 13)
+        Me.Label4.TabIndex = 1
+        Me.Label4.Text = "Списък на жалбите свързани със случая:"
+        '
+        'tbComplaintsList
+        '
+        Me.tbComplaintsList.AllowDrop = True
+        Me.tbComplaintsList.Location = New System.Drawing.Point(11, 27)
+        Me.tbComplaintsList.Name = "tbComplaintsList"
+        Me.tbComplaintsList.Size = New System.Drawing.Size(542, 20)
+        Me.tbComplaintsList.TabIndex = 0
+        '
         'btnCancel
         '
         Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
@@ -667,6 +830,10 @@ Partial Class FormMain
         Me.TabPage3.PerformLayout()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
+        Me.TabPage5.ResumeLayout(False)
+        Me.TabPage5.PerformLayout()
+        Me.grbLetters.ResumeLayout(False)
+        Me.grbLetters.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -726,4 +893,20 @@ Partial Class FormMain
     Friend WithEvents chkB_StandardsFullSet As CheckBox
     Friend WithEvents gbDZOF As GroupBox
     Friend WithEvents gbRZOK As GroupBox
+    Friend WithEvents TabPage5 As TabPage
+    Friend WithEvents Label4 As Label
+    Friend WithEvents tbComplaintsList As TextBox
+    Friend WithEvents grbLetters As GroupBox
+    Friend WithEvents cbDomainSource4 As ComboBox
+    Friend WithEvents cbDomainSource3 As ComboBox
+    Friend WithEvents cbDomainSource2 As ComboBox
+    Friend WithEvents cbDomainSource1 As ComboBox
+    Friend WithEvents cbAuthority4 As ComboBox
+    Friend WithEvents tbLetter4 As TextBox
+    Friend WithEvents cbAuthority3 As ComboBox
+    Friend WithEvents tbLetter3 As TextBox
+    Friend WithEvents cbAuthority2 As ComboBox
+    Friend WithEvents tbLetter2 As TextBox
+    Friend WithEvents cbAuthority1 As ComboBox
+    Friend WithEvents tbLetter1 As TextBox
 End Class
