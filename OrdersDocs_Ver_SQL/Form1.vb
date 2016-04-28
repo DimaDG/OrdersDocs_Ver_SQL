@@ -26,7 +26,8 @@
     End Sub
     'обработва кликване и промяна в индекса на Вид заповед
     Private Sub chkListBoxReason_SelectedIndexChanged(sender As Object, e As EventArgs) Handles chkListBoxReason.SelectedIndexChanged
-        'Вкл/ изкл таба "Жалби и писма"
+
+        'Вкл/ изкл съответните полета за "Жалби"
         Select Case chkListBoxReason.GetItemChecked(0) 'Or chkListBoxReason.GetItemChecked(1)
             Case True
                 'Me.TabControl1.TabPages.Item(4).Enabled = True
@@ -37,6 +38,7 @@
                 Me.tbComplaintsList.Enabled = False
                 Me.Label4.Enabled = False
         End Select
+        'Вкл/ изкл съответните полета за "Писма"
         Select Case chkListBoxReason.GetItemChecked(1)
             Case True
                 'Me.TabControl1.TabPages.Item(4).Enabled = True
@@ -99,4 +101,7 @@
         objAuditTasks.Add(objNewAuditTask)
     End Sub
 
+    Private Sub TabPage2_BindingContextChanged(sender As Object, e As EventArgs) Handles TabPage2.BindingContextChanged
+
+    End Sub
 End Class

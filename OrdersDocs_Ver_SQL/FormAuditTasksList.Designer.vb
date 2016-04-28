@@ -41,15 +41,15 @@ Partial Class FormAuditTasksList
         Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Повторна", New System.Windows.Forms.TreeNode() {TreeNode15, TreeNode16})
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TreeViewReasons = New System.Windows.Forms.TreeView()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(541, 6)
+        Me.Label4.Location = New System.Drawing.Point(721, 7)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(193, 13)
+        Me.Label4.Size = New System.Drawing.Size(255, 17)
         Me.Label4.TabIndex = 10
         Me.Label4.Text = "Основание (причина) за проверката:"
         '
@@ -57,7 +57,8 @@ Partial Class FormAuditTasksList
         '
         Me.TreeViewReasons.BackColor = System.Drawing.SystemColors.Control
         Me.TreeViewReasons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TreeViewReasons.Location = New System.Drawing.Point(544, 26)
+        Me.TreeViewReasons.Location = New System.Drawing.Point(725, 32)
+        Me.TreeViewReasons.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TreeViewReasons.Name = "TreeViewReasons"
         TreeNode1.ForeColor = System.Drawing.Color.Red
         TreeNode1.Name = "Node3"
@@ -109,35 +110,24 @@ Partial Class FormAuditTasksList
         TreeNode17.Text = "Повторна"
         Me.TreeViewReasons.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode3, TreeNode14, TreeNode17})
         Me.TreeViewReasons.ShowNodeToolTips = True
-        Me.TreeViewReasons.Size = New System.Drawing.Size(190, 280)
+        Me.TreeViewReasons.Size = New System.Drawing.Size(253, 344)
         Me.TreeViewReasons.TabIndex = 9
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 6)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 13)
-        Me.Label1.TabIndex = 12
-        Me.Label1.Text = "Списък на задачите:"
         '
         'FormAuditTasksList
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(766, 393)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(990, 484)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.TreeViewReasons)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormAuditTasksList"
-        Me.Text = "FormAuditTasksList"
+        Me.Text = "Описание на задачите по заповедта"
         Me.ResumeLayout(False)
         Me.PerformLayout()
-        Me.TreeViewReasons.ExpandAll()
 
     End Sub
 
     Friend WithEvents Label4 As Label
     Friend WithEvents TreeViewReasons As TreeView
-    Friend WithEvents Label1 As Label
 End Class
