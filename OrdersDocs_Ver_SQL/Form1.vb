@@ -1,4 +1,5 @@
 ﻿Public Class FormMain
+
     'Обработва кликването върху бутона Cancel
     Private Sub btnCancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
         Me.Close()
@@ -79,9 +80,7 @@
     'обработва извличането на пълния стринг на текста за Основание за проверката
     '!!!да се пренесе в FormAuditTasksList, където се намира списъка!!!
     Private Sub TreeViewReasons_AfterSelect(sender As Object, e As TreeViewEventArgs)
-        'За да се извлече пълният текст от избраното ниво на "Основание"
-        Debug.WriteLine("--------------------------------")
-        Debug.WriteLine(FormAuditTasksList.TreeViewReasons.SelectedNode.FullPath)
+
     End Sub
     'извиква форма FormAuditTasksList след натискане на бутона за редакция на задачите
     Private Sub btnTasksListEdit_Click(sender As Object, e As EventArgs) Handles btnTasksListEdit.Click
@@ -101,7 +100,12 @@
         objAuditTasks.Add(objNewAuditTask)
     End Sub
 
-    Private Sub TabPage2_BindingContextChanged(sender As Object, e As EventArgs) Handles TabPage2.BindingContextChanged
+    Private Sub TreeViewReasons_MouseClick(sender As Object, e As MouseEventArgs) Handles TreeViewReasons.MouseClick
+        TreeViewReasons.ExpandAll()
+    End Sub
 
+    Private Sub lbAuditObject_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lbAuditObject.SelectedIndexChanged
+        Me.nlTasksCount.Enabled = True
+        Me.btnTasksListEdit.Enabled = True
     End Sub
 End Class

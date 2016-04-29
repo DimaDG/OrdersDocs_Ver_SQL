@@ -22,10 +22,29 @@ Partial Class FormMain
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim TreeNode35 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
+        Dim TreeNode36 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
+        Dim TreeNode37 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Планова", New System.Windows.Forms.TreeNode() {TreeNode35, TreeNode36})
+        Dim TreeNode38 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по случай (казус)")
+        Dim TreeNode39 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
+        Dim TreeNode40 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
+        Dim TreeNode41 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("тематична", New System.Windows.Forms.TreeNode() {TreeNode39, TreeNode40})
+        Dim TreeNode42 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("самосезиране", New System.Windows.Forms.TreeNode() {TreeNode38, TreeNode41})
+        Dim TreeNode43 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по случай (казус)")
+        Dim TreeNode44 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("частична")
+        Dim TreeNode45 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("пълна")
+        Dim TreeNode46 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("тематична", New System.Windows.Forms.TreeNode() {TreeNode44, TreeNode45})
+        Dim TreeNode47 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("по сигнал", New System.Windows.Forms.TreeNode() {TreeNode43, TreeNode46})
+        Dim TreeNode48 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Извънредна", New System.Windows.Forms.TreeNode() {TreeNode42, TreeNode47})
+        Dim TreeNode49 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("планова")
+        Dim TreeNode50 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("извънредна")
+        Dim TreeNode51 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Повторна", New System.Windows.Forms.TreeNode() {TreeNode49, TreeNode50})
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label24 = New System.Windows.Forms.Label()
         Me.chbCorruption = New System.Windows.Forms.CheckBox()
         Me.btnTasksListEdit = New System.Windows.Forms.Button()
+        Me.TreeViewReasons = New System.Windows.Forms.TreeView()
         Me.Label18 = New System.Windows.Forms.Label()
         Me.nlTasksCount = New System.Windows.Forms.NumericUpDown()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -116,13 +135,15 @@ Partial Class FormMain
         Me.TabControl1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
-        Me.TabControl1.Size = New System.Drawing.Size(759, 442)
+        Me.TabControl1.Size = New System.Drawing.Size(1030, 442)
         Me.TabControl1.TabIndex = 0
         '
         'TabPage1
         '
+        Me.TabPage1.Controls.Add(Me.Label24)
         Me.TabPage1.Controls.Add(Me.chbCorruption)
         Me.TabPage1.Controls.Add(Me.btnTasksListEdit)
+        Me.TabPage1.Controls.Add(Me.TreeViewReasons)
         Me.TabPage1.Controls.Add(Me.Label18)
         Me.TabPage1.Controls.Add(Me.nlTasksCount)
         Me.TabPage1.Controls.Add(Me.Label11)
@@ -137,10 +158,20 @@ Partial Class FormMain
         Me.TabPage1.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage1.Size = New System.Drawing.Size(751, 413)
+        Me.TabPage1.Size = New System.Drawing.Size(1022, 413)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Заповед"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label24
+        '
+        Me.Label24.AutoSize = True
+        Me.Label24.Location = New System.Drawing.Point(371, 10)
+        Me.Label24.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(255, 17)
+        Me.Label24.TabIndex = 18
+        Me.Label24.Text = "Основание (причина) за проверката:"
         '
         'chbCorruption
         '
@@ -148,7 +179,7 @@ Partial Class FormMain
         Me.chbCorruption.BackColor = System.Drawing.Color.Red
         Me.chbCorruption.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.chbCorruption.ForeColor = System.Drawing.Color.White
-        Me.chbCorruption.Location = New System.Drawing.Point(530, 371)
+        Me.chbCorruption.Location = New System.Drawing.Point(821, 370)
         Me.chbCorruption.Name = "chbCorruption"
         Me.chbCorruption.Size = New System.Drawing.Size(177, 21)
         Me.chbCorruption.TabIndex = 16
@@ -158,6 +189,7 @@ Partial Class FormMain
         'btnTasksListEdit
         '
         Me.btnTasksListEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnTasksListEdit.Enabled = False
         Me.btnTasksListEdit.Location = New System.Drawing.Point(15, 312)
         Me.btnTasksListEdit.Margin = New System.Windows.Forms.Padding(4)
         Me.btnTasksListEdit.Name = "btnTasksListEdit"
@@ -166,31 +198,91 @@ Partial Class FormMain
         Me.btnTasksListEdit.Text = "Списък на задачите"
         Me.btnTasksListEdit.UseVisualStyleBackColor = False
         '
+        'TreeViewReasons
+        '
+        Me.TreeViewReasons.BackColor = System.Drawing.Color.White
+        Me.TreeViewReasons.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TreeViewReasons.Location = New System.Drawing.Point(375, 35)
+        Me.TreeViewReasons.Margin = New System.Windows.Forms.Padding(4)
+        Me.TreeViewReasons.Name = "TreeViewReasons"
+        TreeNode35.ForeColor = System.Drawing.Color.Red
+        TreeNode35.Name = "Node3"
+        TreeNode35.Text = "частична"
+        TreeNode36.ForeColor = System.Drawing.Color.Red
+        TreeNode36.Name = "Node5"
+        TreeNode36.Text = "пълна"
+        TreeNode37.ForeColor = System.Drawing.Color.Blue
+        TreeNode37.Name = "Node0"
+        TreeNode37.Text = "Планова"
+        TreeNode38.ForeColor = System.Drawing.Color.Red
+        TreeNode38.Name = "Node8"
+        TreeNode38.Text = "по случай (казус)"
+        TreeNode39.ForeColor = System.Drawing.Color.Red
+        TreeNode39.Name = "Node10"
+        TreeNode39.Text = "частична"
+        TreeNode40.ForeColor = System.Drawing.Color.Red
+        TreeNode40.Name = "Node11"
+        TreeNode40.Text = "пълна"
+        TreeNode41.ForeColor = System.Drawing.Color.Black
+        TreeNode41.Name = "Node9"
+        TreeNode41.Text = "тематична"
+        TreeNode42.Name = "Node6"
+        TreeNode42.Text = "самосезиране"
+        TreeNode43.ForeColor = System.Drawing.Color.Red
+        TreeNode43.Name = "Node12"
+        TreeNode43.Text = "по случай (казус)"
+        TreeNode44.ForeColor = System.Drawing.Color.Red
+        TreeNode44.Name = "Node14"
+        TreeNode44.Text = "частична"
+        TreeNode45.ForeColor = System.Drawing.Color.Red
+        TreeNode45.Name = "Node15"
+        TreeNode45.Text = "пълна"
+        TreeNode46.Name = "Node13"
+        TreeNode46.Text = "тематична"
+        TreeNode47.Name = "Node7"
+        TreeNode47.Text = "по сигнал"
+        TreeNode48.ForeColor = System.Drawing.Color.Blue
+        TreeNode48.Name = "Node1"
+        TreeNode48.Text = "Извънредна"
+        TreeNode49.ForeColor = System.Drawing.Color.Red
+        TreeNode49.Name = "Node16"
+        TreeNode49.Text = "планова"
+        TreeNode50.ForeColor = System.Drawing.Color.Red
+        TreeNode50.Name = "Node17"
+        TreeNode50.Text = "извънредна"
+        TreeNode51.ForeColor = System.Drawing.Color.Blue
+        TreeNode51.Name = "Node2"
+        TreeNode51.Text = "Повторна"
+        Me.TreeViewReasons.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode37, TreeNode48, TreeNode51})
+        Me.TreeViewReasons.ShowNodeToolTips = True
+        Me.TreeViewReasons.Size = New System.Drawing.Size(253, 344)
+        Me.TreeViewReasons.TabIndex = 17
+        '
         'Label18
         '
         Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(15, 256)
         Me.Label18.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(180, 17)
+        Me.Label18.Size = New System.Drawing.Size(163, 17)
         Me.Label18.TabIndex = 14
-        Me.Label18.Text = "Брой задачи в заповедта:"
+        Me.Label18.Text = "Задача № в заповедта:"
         '
         'nlTasksCount
         '
         Me.nlTasksCount.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.nlTasksCount.Enabled = False
         Me.nlTasksCount.Location = New System.Drawing.Point(15, 280)
         Me.nlTasksCount.Margin = New System.Windows.Forms.Padding(4)
         Me.nlTasksCount.Name = "nlTasksCount"
         Me.nlTasksCount.Size = New System.Drawing.Size(179, 22)
         Me.nlTasksCount.TabIndex = 13
         Me.nlTasksCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.nlTasksCount.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(379, 275)
+        Me.Label11.Location = New System.Drawing.Point(670, 274)
         Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(59, 17)
@@ -201,7 +293,7 @@ Partial Class FormMain
         '
         Me.cbScope.FormattingEnabled = True
         Me.cbScope.Items.AddRange(New Object() {"само в един обект", "в няколко обекта (проследяване на случай)"})
-        Me.cbScope.Location = New System.Drawing.Point(379, 299)
+        Me.cbScope.Location = New System.Drawing.Point(670, 298)
         Me.cbScope.Margin = New System.Windows.Forms.Padding(4)
         Me.cbScope.Name = "cbScope"
         Me.cbScope.Size = New System.Drawing.Size(328, 24)
@@ -231,7 +323,7 @@ Partial Class FormMain
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(379, 17)
+        Me.Label3.Location = New System.Drawing.Point(670, 10)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(123, 17)
@@ -243,7 +335,7 @@ Partial Class FormMain
         Me.chkListBoxReason.CheckOnClick = True
         Me.chkListBoxReason.FormattingEnabled = True
         Me.chkListBoxReason.Items.AddRange(New Object() {"Проверка по жалба(и)", "Проверка по писмо(а)", "Структура, организация и дейност", "Проверка по медицински стандарти", "По Наредба за достъп /НОПДМП/", "По Наредба №34", "Проверка на РЗОК", "Проверка на НЗОК(цу)", "ДДЗО"})
-        Me.chkListBoxReason.Location = New System.Drawing.Point(379, 36)
+        Me.chkListBoxReason.Location = New System.Drawing.Point(670, 35)
         Me.chkListBoxReason.Margin = New System.Windows.Forms.Padding(4)
         Me.chkListBoxReason.Name = "chkListBoxReason"
         Me.chkListBoxReason.Size = New System.Drawing.Size(328, 174)
@@ -319,7 +411,7 @@ Partial Class FormMain
         Me.TabPage2.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(4)
-        Me.TabPage2.Size = New System.Drawing.Size(751, 413)
+        Me.TabPage2.Size = New System.Drawing.Size(1022, 413)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Обект"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -548,7 +640,7 @@ Partial Class FormMain
         Me.TabPage3.Location = New System.Drawing.Point(4, 25)
         Me.TabPage3.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage3.Name = "TabPage3"
-        Me.TabPage3.Size = New System.Drawing.Size(751, 413)
+        Me.TabPage3.Size = New System.Drawing.Size(1022, 413)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Екип"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -637,7 +729,7 @@ Partial Class FormMain
         Me.TabPage4.Location = New System.Drawing.Point(4, 25)
         Me.TabPage4.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage4.Name = "TabPage4"
-        Me.TabPage4.Size = New System.Drawing.Size(751, 413)
+        Me.TabPage4.Size = New System.Drawing.Size(1022, 413)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Стандарти"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -718,7 +810,7 @@ Partial Class FormMain
         Me.TabPage5.Location = New System.Drawing.Point(4, 25)
         Me.TabPage5.Margin = New System.Windows.Forms.Padding(4)
         Me.TabPage5.Name = "TabPage5"
-        Me.TabPage5.Size = New System.Drawing.Size(751, 413)
+        Me.TabPage5.Size = New System.Drawing.Size(1022, 413)
         Me.TabPage5.TabIndex = 4
         Me.TabPage5.Text = "Жалби и писма"
         Me.TabPage5.UseVisualStyleBackColor = True
@@ -855,9 +947,10 @@ Partial Class FormMain
         '
         'btnCancel
         '
-        Me.btnCancel.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnCancel.BackColor = System.Drawing.Color.Red
         Me.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnCancel.Location = New System.Drawing.Point(651, 448)
+        Me.btnCancel.ForeColor = System.Drawing.Color.White
+        Me.btnCancel.Location = New System.Drawing.Point(139, 448)
         Me.btnCancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancel.Name = "btnCancel"
         Me.btnCancel.Size = New System.Drawing.Size(100, 28)
@@ -881,7 +974,7 @@ Partial Class FormMain
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.btnCancel
-        Me.ClientSize = New System.Drawing.Size(756, 481)
+        Me.ClientSize = New System.Drawing.Size(1043, 481)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.TabControl1)
@@ -983,4 +1076,6 @@ Partial Class FormMain
     Friend WithEvents Label23 As Label
     Friend WithEvents Label22 As Label
     Friend WithEvents chbCorruption As CheckBox
+    Friend WithEvents Label24 As Label
+    Friend WithEvents TreeViewReasons As TreeView
 End Class

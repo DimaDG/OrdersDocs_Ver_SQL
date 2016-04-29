@@ -6,4 +6,6 @@ Public Class AuditTask
     Public Text As String
     'за запис на основанието за изпълнение на задачата
     Public Reason As String
+    'за запис на името на обекта на проверката
+    Public AuditObj As String
 End Class
